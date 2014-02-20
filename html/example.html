@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Plain JS Pagination</title>
+        <link rel="stylesheet" href="../css/plain-js-pagination.css">
+	</head>
+
+
+	<body>
+
+		<!-- List Container -->
+		<div id="list-container" class="display-none"></div>
+
+		<!-- Pagination -->
+
+		<div id="list-pagination" class="list-pagination display-none">
+            <div id="list-pagination-first" class="list-pagination-element" title="First Page" onclick="pagination.getFirstPage();"></div>
+            <div id="list-pagination-prev" class="list-pagination-element" title="Previous Page" onclick="pagination.getPreviousPage();"></div>
+            <div id="list-pagination-pages" class="list-pagination-element"></div>
+            <div id="list-pagination-next" class="list-pagination-element" title="Next Page" onclick="pagination.getNextPage();"></div>
+            <div id="list-pagination-last" class="list-pagination-element" title="Last Page" onclick="pagination.getLastPage();"></div>
+            <div class="change_view">
+                <a href="javascript:void(0);" title="View As Cards" id="view_as_cards" class="selected" onclick="pagination.viewAsCards();"></a>
+                <a href="javascript:void(0);" title="View As List" id="view_as_list" onclick="pagination.viewAsList();"></a>
+            </div>
+
+			<select id="items-per-page" class="list-pagination-items-per-page" onchange="pagination.numberOfElementsChanged();">
+	            <option value="10" selected>10</option>
+	            <option value="20">20</option>
+	            <option value="40">40</option>
+	        </select>
+	        <span class="cards_per_page">items per page</span>
+    	</div>
+
+
+        <script src="../js/plain-js-pagination.js"></script>
+	</body>
+</html>
