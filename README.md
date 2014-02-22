@@ -35,6 +35,7 @@ To work with the plugin, 3 steps are required:
 		    </select>
 		</div>
 
+
 2. For initialization, the user-defined function that fetches the data has to be passed
 to the listItems function as a callback:
 
