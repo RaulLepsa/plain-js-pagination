@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Plain JS Pagination</title>
+        <link rel="stylesheet" href="default.css">
+	</head>
+
+
+	<body>
+
+		<!-- List Container -->
+		<div id="list-container"></div>
+
+		<!-- Pagination -->
+		<div id="list-pagination" class="list-pagination">
+		    <div id="list-pagination-first" class="list-pagination-element" onclick="pagination.getFirstPage();"><< First</div>
+		    <div id="list-pagination-prev" class="list-pagination-element" onclick="pagination.getPreviousPage();">< Prev</div>
+		    <div id="list-pagination-pages" class="list-pagination-element"></div>
+		    <div id="list-pagination-next" class="list-pagination-element" onclick="pagination.getNextPage();">Next ></div>
+		    <div id="list-pagination-last" class="list-pagination-element" onclick="pagination.getLastPage();">Last >></div>
+
+		    <select id="items-per-page" class="list-pagination-items-per-page" onchange="pagination.numberOfElementsChanged();">
+		        <option value="10" selected>10</option>
+		        <option value="25">25</option>
+		        <option value="50">50</option>
+		    </select>
+		</div>
+
+
+        <script src="plain-js-pagination.js"></script>
+	</body>
+</html>
