@@ -16,7 +16,8 @@ HTML file.
 To work with the plugin, 3 steps are required:
 
 1. In the body of the page, the following has to be included:
-
+	
+	```
 	<!-- List Container -->
 	<div id="list-container"</div>
 
@@ -34,19 +35,22 @@ To work with the plugin, 3 steps are required:
 	        <option value="50">50</option>
 	    </select>
 	</div>
-
+	```
 
 2. For initialization, the user-defined function that fetches the data has to be passed
 to the listItems function as a callback:
 
+	```
     pagination.listItems(listEntityFunction);
-
+	```
 
 3. The above instruction sets the pagination parameters and then calls the callback function.
 After the results are fetched, in order to adjust the pagination and display it properly,
 the display function has to be called:
 
+	```
 	pagination.displayPagination(currentPage, total);
+	```
 
 As it can be seen, it requires from the server response the current page and the total number
 of pages.
