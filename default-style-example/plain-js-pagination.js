@@ -83,7 +83,7 @@ var pagination = {
 
         // What to display before the current page
         if (pagination.CURRENT_PAGE_NUMBER - pagination.MORE_PAGES_TO_DISPLAY > 1) {
-            pagesBefore = '... ';
+            pagesBefore = '<div class="list-pagination-element">...</div>';
             displayFrom = pagination.CURRENT_PAGE_NUMBER - pagination.MORE_PAGES_TO_DISPLAY;
         }
         for (var i = displayFrom; i < pagination.CURRENT_PAGE_NUMBER; i++) {
@@ -101,7 +101,7 @@ var pagination = {
             pagesAfter += '<div class="list-pagination-element" onclick="pagination.getCustomPage(' + j + ')">' + j + '</div>';
         }
         if (pagination.CURRENT_PAGE_NUMBER + pagination.MORE_PAGES_TO_DISPLAY < pagination.LAST_PAGE_NUMBER) {
-            pagesAfter += ' ...';
+            pagesAfter += '<div class="list-pagination-element">...</div>';
         }
 
         // Put everything in the pagination
