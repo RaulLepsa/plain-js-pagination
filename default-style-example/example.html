@@ -5,7 +5,7 @@
 	</head>
 
 
-	<body>
+	<body onload="pagination.listItems(myListFunction)">
 
 		<!-- List Container -->
 		<div id="list-container"></div>
@@ -19,13 +19,34 @@
 		    <div id="list-pagination-last" class="list-pagination-element" onclick="pagination.getLastPage();">Last >></div>
 
 		    <select id="items-per-page" class="list-pagination-items-per-page" onchange="pagination.numberOfElementsChanged();">
-		        <option value="10" selected>10</option>
-		        <option value="25">25</option>
-		        <option value="50">50</option>
+		        <option value="2" selected>2</option>
+		        <option value="3">3</option>
+		        <option value="5">5</option>
 		    </select>
 		</div>
 
 
         <script src="plain-js-pagination.js"></script>
+        <script src="mock-server.js"></script>
+
+        <script type="text/javascript">
+        	function myListFunction(startFrom, numberOfElements) {
+        		var listHtml = '';
+
+        		// Get mock server response (contains the list, current page and total number of elements)
+        		var response = server.getListResponse(startFrom, numberOfElements);
+        		
+        		// Construct the List HTML
+        		for (var i = 0; i < response.list.length; i++) {
+        			listHtml += '<div>' + response.list[i] + '</div>';
+        		}
+
+        		// Set the List HTML
+        		document.getElementById('list-container').innerHTML = listHtml;
+
+        		// Call the displayPagination function that adjusts the plugin to the current page
+        		pagination.displayPagination(response.currentPage, response.total);
+        	}
+        </script>
 	</body>
 </html>

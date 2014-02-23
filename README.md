@@ -13,7 +13,7 @@ Usage
 Include the plain-js-pagination.js file and the provided CSS (optional) in the
 HTML file. 
 
-To work with the plugin, 3 steps are required:
+To work with the plugin, 4 steps are required:
 
 1. In the body of the page, the following has to be included:
 	
@@ -36,12 +36,22 @@ To work with the plugin, 3 steps are required:
 		</div>
 
 
-2. For initialization, the user-defined function that fetches the data has to be passed
+2. Define a function that lists the desired entity. This will be called by the plugin.
+It should take offset (startFrom) and the limit(numberOfElements) provided by the pagination 
+library as parameters:
+
+		myListFunction: function(startFrom, numberOfElements) {
+			// fetch data from the server, pagintated
+		}
+
+
+3. For initialization, the user-defined function that fetches the data has to be passed
 to the listItems function as a callback:
 
-	    pagination.listItems(listEntityFunction);
+	    pagination.listItems(myListFunction);
 
-3. The above instruction sets the pagination parameters and then calls the callback function.
+
+4. The above instruction sets the pagination parameters and then calls the callback function.
 After the results are fetched, in order to adjust the pagination and display it properly,
 the display function has to be called:
 
