@@ -258,18 +258,5 @@ var pagination = {
             }
         }
         window.location.href = hostName + newParameters;
-    },
-
-    viewAsList: function() {
-        $("#list-container").addClass('list_view');
-        $("#view_as_cards").removeClass("selected");
-        $("#view_as_list").addClass("selected");
-        $('.general_table_header').show();
-    },
-    viewAsCards: function() {
-        $("#list-container").removeClass('list_view');
-        $("#view_as_cards").addClass("selected");
-        $("#view_as_list").removeClass("selected");
-        $('.general_table_header').hide();
     }
 };
