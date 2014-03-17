@@ -1,5 +1,4 @@
 #Plain Javascript Pagination
-----------------------------
 
 ##Description
 
