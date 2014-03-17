@@ -1,17 +1,17 @@
 #Plain Javascript Pagination
-===========================
+----------------------------
 
 ##Description
------------
+
 This is a pagination library implemented in plain Javascript. Although
 there are jQuery alternatives available, this plugin is intended to offer
 generic pagination support using only Javascript.
 
 ##[Demo - with default style](http://raullepsa.github.io/plain-js-pagination)
-----------
+
 
 ##Usage
------
+
 Include the plain-js-pagination.js file and the provided CSS (optional) in the
 HTML file. 
 
