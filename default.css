@@ -46,4 +46,5 @@ div.list-pagination select.list-pagination-items-per-page {
     float: right;
     padding: 5px;
     height: 35px;
+    width: 50px;
 }
